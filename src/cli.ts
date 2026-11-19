@@ -21,6 +21,6 @@ if (process.argv[2] === 'explain') {
   const commit = execFileSync('git', ['rev-parse', 'HEAD'], { encoding: 'utf8' }).trim();
   closeBallot(db, { ballotId, currentCommit: commit, yesterdaySnapshot: JSON.stringify({ hats: 14 }), seed: '3105' });
   console.log(`Local job: ${JSON.stringify(runNextJob(db))}`);
-  console.log('\nDevin task preview\n' + readFileSync('docs/devin-task.md', 'utf8'));
+  console.log(`\nDevin task preview\nBase commit: ${commit}\nReplay fixture: 14 hats on Platform 3, seed 3105\n` + readFileSync('docs/devin-task.md', 'utf8'));
 }
 db.close();
