@@ -3,7 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "description": "A small town governed by its residents' laws",
-  "engines": { "node": ">=24" },
-  "scripts": {},
-  "devDependencies": {}
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "tsx --test test/*.test.ts",
+    "demo": "tsx src/cli.ts demo",
+    "explain": "tsx src/cli.ts explain",
+    "check": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "type": "module"
 }
